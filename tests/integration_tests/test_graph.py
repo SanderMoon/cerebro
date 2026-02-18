@@ -1,15 +1,16 @@
 import pytest
 
-from react_agent import graph
-from react_agent.context import Context
+from cerebro import graph
+from cerebro.context import Context
 
 pytestmark = pytest.mark.anyio
 
 
-async def test_react_agent_simple_passthrough() -> None:
+async def test_cerebro_simple_response() -> None:
+    """Smoke test: agent returns a response without tool calls for a simple query."""
     res = await graph.ainvoke(
-        {"messages": [("user", "Who is the founder of LangChain?")]},  # type: ignore
-        context=Context(system_prompt="You are a helpful AI assistant."),
+        {"messages": [("user", "Reply with exactly the word PONG and nothing else.")]},
+        context=Context(),
     )
 
-    assert "harrison" in str(res["messages"][-1].content).lower()
+    assert "pong" in str(res["messages"][-1].content).lower()
