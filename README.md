@@ -1,6 +1,6 @@
 # Cerebro
 
-A personal AI assistant built on [LangGraph](https://github.com/langchain-ai/langgraph). Cerebro connects to your [local-brain](https://github.com/sandermoonemans/local-brain-init) knowledge base via MCP, giving the agent direct access to your todos, notes, projects, and daily logs through a terminal chat interface.
+A personal AI assistant built on [LangGraph](https://github.com/langchain-ai/langgraph). Cerebro connects to your [local-brain](https://github.com/sandermoonemans/local-brain) knowledge base via MCP, giving the agent direct access to your todos, notes, projects, and daily logs through a terminal chat interface.
 
 ## Features
 
